@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:context=".ChiTietThongTinActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_tool_bar_top"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#56B6C2"
+                android:outlineProvider="bounds">
+
+                <ImageView
+                    android:id="@+id/iv_backTaiKhoan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_arrow_back" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Thông tin tài khoản"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rtl_header"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/rl_tool_bar_top"
+                android:background="@drawable/logo_header">
+
+                <TextView
+                    android:id="@+id/txt_tenUser"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="103dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginEnd="108dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/edt_tenUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="103dp"
+                    android:layout_marginTop="132dp"
+                    android:layout_marginEnd="108dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:hint="Sửa tên"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="124dp"
+                    android:layout_marginEnd="18dp"
+                    android:src="@drawable/icon_camera" />
+
+                <ImageView
+                    android:id="@+id/img_fix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="159dp"
+                    android:layout_marginEnd="17dp"
+                    android:src="@drawable/icon_fix" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rtl_header"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_mail"
+                android:drawablePadding="20dp"
+                android:textColor="@color/color_black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edt_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rtl_header"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_mail"
+                android:drawablePadding="20dp"
+                android:hint="tranhoangdung162@gmail.com"
+                android:textColor="@color/color_black"
+                android:textColorHint="#cccccc"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_mail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_phone"
+                android:drawablePadding="20dp"
+                android:textColor="@color/color_black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_mail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_phone"
+                android:drawablePadding="20dp"
+                android:hint="Sửa số điện thoại"
+                android:textColor="@color/color_black"
+                android:textColorHint="#cccccc"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/txt_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_phone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_position"
+                android:drawablePadding="20dp"
+                android:textColor="@color/color_black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edt_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_phone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_position"
+                android:drawablePadding="20dp"
+                android:hint="Sửa vị trí"
+                android:textColor="#000000"
+                android:textColorHint="#cccccc"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_position"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/vien_button_chitiettt"
+                android:text="Lưu"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_password_old"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_save"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="20dp"
+                android:hint="Mật khẩu cũ"
+                android:textColor="#000000"
+                android:textColorHint="#cccccc"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edt_password_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_password_old"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="20dp"
+                android:hint="Mật khẩu mới"
+                android:textColor="#000000"
+                android:textColorHint="#cccccc"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edt_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_password_new"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vien_chitiet_thongtin"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="20dp"
+                android:hint="Nhập lại mật khẩu mới"
+                android:textColor="#000000"
+                android:textColorHint="#cccccc"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_change_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_password_confirm"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/vien_button_chitiettt"
+                android:text="Doi mat khau"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ThongTinSanPhamActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool_bar_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/backgroundtoobar"
+        android:outlineProvider="bounds"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_arrow_back" />
+
+        <TextView
+            android:id="@+id/txt_nametheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bober_abc"
+            android:fontFamily="serif"
+            android:text="Ten san pham"
+            android:textColor="@color/text_white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_hinhSP"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/rl_tool_bar_top" />
+
+    <TextView
+        android:id="@+id/txt_tenSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_hinhSP"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:text="TEN SAN PHAM"
+        android:textColor="@color/text_color_main"
+        android:textSize="@dimen/dp20" />
+
+    <TextView
+        android:id="@+id/txt_giaSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_tenSP"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:text="250.000"
+        android:textColor="@color/text_color_main"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:id="@+id/ln_kho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_giaSP"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kho: "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_slSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="500"
+            android:textColor="@color/text_color_main" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ln_sl"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ln_kho"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:text="Số lượng"
+            android:textColor="@color/text_color_main"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bolder_square"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_subtract"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_subtract" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey_underline" />
+
+            <TextView
+                android:id="@+id/txt_number"
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey_underline" />
+
+            <ImageView
+                android:id="@+id/img_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_plus" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ln_sl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/backgroundtoobar"
+        android:drawableLeft="@drawable/icon_youtube"
+        android:drawablePadding="10dp"
+        android:text="Xem review san pham"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/ln_mota"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ln_buy"
+        android:layout_below="@+id/btn_review"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="5dp"
+            android:text="Mô tả sản phẩm"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20">
+
+            <TextView
+                android:id="@+id/txt_motaSP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/text_color_main"
+                android:textSize="20sp" />
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_buy"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@color/greenItem"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_chat_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:background="@color/greenItem"
+            android:drawableTop="@drawable/icon_bottom_chat"
+            android:gravity="center"
+            android:text="Chat ngay"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#7E7A7A" />
+
+        <TextView
+            android:id="@+id/txt_add_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/greenItem"
+            android:drawableTop="@drawable/icon_bottom_shoppingcart"
+            android:gravity="center"
+            android:text="Thêm vào Giỏ hàng"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+

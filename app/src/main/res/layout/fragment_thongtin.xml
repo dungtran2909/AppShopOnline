@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1">
+
+
+    <RelativeLayout
+        android:id="@+id/rtl_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/rl_tool_bar_top"
+        android:background="@drawable/logo_header"
+        tools:ignore="NotSibling">
+
+        <!--<agency.tango.android.avatarview.views.AvatarView-->
+        <!--android:id="@+id/avatar_view"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginStart="13dp"-->
+        <!--android:layout_marginTop="62dp"-->
+        <!--android:layout_marginEnd="297dp"-->
+        <!--android:layout_marginBottom="38dp"-->
+        <!--app:av_border_color="@android:color/white"-->
+        <!--app:av_border_width="4dp"-->
+        <!--app:av_text_size_percentage="35" />-->
+
+        <TextView
+            android:id="@+id/txt_tenUser"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="103dp"
+            android:layout_marginRight="-312dp"
+            android:layout_marginBottom="71dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/txt_like"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/rtl_header"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:background="@drawable/vien_thongtin"-->
+        <!--android:drawableLeft="@drawable/icon_heart_red"-->
+        <!--android:drawablePadding="20dp"-->
+        <!--android:text="Đã thích"-->
+        <!--android:textSize="20sp" />-->
+
+    <TextView
+        android:id="@+id/txt_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rtl_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/vien_thongtin"
+        android:drawableLeft="@drawable/icon_user_blue"
+        android:drawablePadding="20dp"
+        android:text="Thiết lập tài khoản"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_setting"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/vien_thongtin"
+        android:drawableLeft="@drawable/icon_support_blue"
+        android:drawablePadding="20dp"
+        android:text="Trung tâm hỗ trợ"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_signOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_support"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/vien_thongtin"
+        android:drawableLeft="@drawable/icon_signout_blue"
+        android:drawablePadding="20dp"
+        android:text="Đăng xuất"
+        android:textSize="20sp" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_signOut"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="5dp" />
+
+
+</RelativeLayout>

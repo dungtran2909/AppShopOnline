@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp10"
+    android:paddingTop="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10"
+    android:paddingRight="@dimen/dp10">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Đăng ký thành công"
+        android:textColor="@color/text_color_main"
+        android:textSize="@dimen/dp30"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_diareDN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/vien_dn"
+        android:text="Về đăng nhập" />
+
+</LinearLayout>

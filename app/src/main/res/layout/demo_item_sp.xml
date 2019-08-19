@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/greenItem"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:drawableTop="@drawable/icon_bottom_chat"
+                android:background="@color/greenItem"
+                android:text="Chat ngay"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="10sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="match_parent"
+                android:background="#7E7A7A"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableTop="@drawable/icon_bottom_shoppingcart"
+                android:background="@color/greenItem"
+                android:text="Thêm vào Giỏ hàng"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/orangeItem"
+            android:gravity="center"
+            android:text="Mua ngay"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

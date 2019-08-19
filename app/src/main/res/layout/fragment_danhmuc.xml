@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool_bar_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/backgroundtoobar"
+        android:outlineProvider="bounds"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:id="@+id/ln_danhmuc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtBaiHat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bober_abc"
+                android:fontFamily="serif"
+                android:text="Danh Mục Sản Phẩm"
+                android:textAlignment="center"
+                android:textColor="@color/text_white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="11dp"
+            android:src="@drawable/icon_search" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/bober_abc"
+        android:drawableLeft="@drawable/icon_search"
+        android:drawablePadding="@dimen/dp20"
+        android:hint="Tim Kiem"
+        android:textColor="#000000"
+        android:textColorHint="#FF0000"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_phoneDM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/phone_logo"
+            android:drawablePadding="10dp"
+            android:text="Điện thoại"
+            android:gravity="center"
+            android:textColor="@color/text_color_main"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/grey_underline"/>
+
+        <TextView
+            android:id="@+id/txt_tvDM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tv_logo"
+            android:drawablePadding="10dp"
+            android:text="Ti vi"
+            android:gravity="center"
+            android:textColor="@color/text_color_main"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/grey_underline"/>
+
+        <TextView
+            android:id="@+id/txt_tabletDM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tablet_logo"
+            android:drawablePadding="10dp"
+            android:text="Máy tính bảng"
+            android:gravity="center"
+            android:textColor="@color/text_color_main"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/grey_underline"/>
+
+        <TextView
+            android:id="@+id/txt_laptopDM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/laptop_logo"
+            android:drawablePadding="10dp"
+            android:text="Máy tính"
+            android:gravity="center"
+            android:textColor="@color/text_color_main"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/grey_underline"/>
+
+        <TextView
+            android:id="@+id/txt_watchDM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/watch_logo"
+            android:drawablePadding="10dp"
+            android:text="Đồng hồ"
+            android:gravity="center"
+            android:textColor="@color/text_color_main"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/grey_underline"/>
+
+        <TextView
+            android:id="@+id/txt_speakerDM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/headphones_logo"
+            android:drawablePadding="10dp"
+            android:text="Phụ kiện"
+            android:gravity="center"
+            android:textColor="@color/text_color_main"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp20"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/vi_phone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/maker_footer_red"/>
+
+        <View
+            android:id="@+id/vi_tv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+        <View
+            android:id="@+id/vi_tablet"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+        <View
+            android:id="@+id/vi_laptop"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+        <View
+            android:id="@+id/vi_watch"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+        <View
+            android:id="@+id/vi_headphone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/containerLoaiSP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></FrameLayout>
+
+</LinearLayout>

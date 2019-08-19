@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/icon_bottom_uimihome"
+        android:title="UimiHn" />
+
+    <item
+        android:id="@+id/nav_danhmuc"
+        android:icon="@drawable/icon_bottom_category"
+        android:title="Danh mục" />
+
+    <item
+        android:id="@+id/nav_thongbao"
+        android:icon="@drawable/icon_bottom_notifications"
+        android:title="Thông báo" />
+
+    <item
+        android:id="@+id/nav_thongtin"
+        android:icon="@drawable/icon_bottom_user"
+        android:title="Thông tin"/>
+
+</menu>
