@@ -31,6 +31,7 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
     TextView txt_buy_bottom, txt_add_bottom, txt_nametheme;
     ImageView img_back, img_like;
     ImageView img_hinhSP;
+    TextView txtChat;
 
     ImageView img_subtract, img_plus;
     TextView txt_number;
@@ -59,6 +60,13 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
+        txtChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                xyLyChat();
+            }
+        });
+
         img_subtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,6 +137,11 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
 
     }
 
+    private void xyLyChat() {
+        Intent intent=new Intent(ThongTinSanPhamActivity.this, ChatActivity.class);
+        startActivity(intent);
+    }
+
     private void addSpFirebase(){
         SanPhamFirebase sanPhamFirebase = new SanPhamFirebase();
         sanPhamFirebase.setMaSP(sp.getMaSP());
@@ -142,6 +155,8 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
 
 
     private void addControls() {
+
+        txtChat=findViewById(R.id.txt_chat_bottom);
 
         txt_add_bottom = findViewById(R.id.txt_add_bottom);
         img_back = findViewById(R.id.img_back);

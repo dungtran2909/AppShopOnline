@@ -60,6 +60,7 @@
         <activity android:name=".SupportCenterActivity" />
         <activity android:name=".PlayVideoActivity" />
         <activity android:name=".VideoReviewActivity" />
+        <activity android:name=".ChatActivity"/>
         <activity android:name=".ThongTinSanPhamActivity">
 
             <!-- <intent-filter> -->

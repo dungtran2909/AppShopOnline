@@ -57,7 +57,13 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ItemHold
 
         NumberFormat numberFormat = new DecimalFormat("###,###");
         holder.txt_giaSP.setText(numberFormat.format(sanPham.getDonGia())+" VNĐ");
-        holder.txt_motaSP.setText(sanPham.getMoTa());
+
+        String[] thuGon = sanPham.getMoTa().split(" ");
+        if (thuGon.length>3){
+            holder.txt_motaSP.setText(thuGon[0]+" "+thuGon[1]+ " "+thuGon[2]);
+        }
+        else
+            holder.txt_motaSP.setText(thuGon[0]+" "+thuGon[1]);
     }
 
     @Override

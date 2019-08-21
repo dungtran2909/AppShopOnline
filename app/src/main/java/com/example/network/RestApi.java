@@ -62,4 +62,6 @@ public interface RestApi {
     @POST("CTDonHang")
     Call<Boolean> luuMoiCTDonHang(@Query("madh") int madh, @Query("maSP") int maSP, @Query("soLuong") int soLuong);
 
+    @GET("sanpham")
+    Call<SanPham> getSPTheoTen(@Query("tenSanPhamTim") String tenSanPhamTim);
 }

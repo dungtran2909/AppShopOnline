@@ -66,7 +66,15 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.ItemHold
             holder.txt_trangthai.setTextColor(Color.RED);
             holder.txt_trangthai.setText("Đang chờ xử lý");
             holder.img_trangthai.setImageResource(R.drawable.icon_loading);
-        } else {
+        }else if(donHang.getTrangThai() == 1){
+            holder.txt_trangthai.setTextColor(Color.YELLOW);
+            holder.txt_trangthai.setText("Đã xác nhận");
+            holder.img_trangthai.setImageResource(R.drawable.icon_confirmed);
+        }else if(donHang.getTrangThai() == 2){
+            holder.txt_trangthai.setTextColor(Color.GREEN);
+            holder.txt_trangthai.setText("Đang giao hàng");
+            holder.img_trangthai.setImageResource(R.drawable.icon_deliver);
+        }else {
             holder.txt_trangthai.setTextColor(Color.GREEN);
             holder.txt_trangthai.setText("Đã giao hàng");
             holder.img_trangthai.setImageResource(R.drawable.icon_loaded);

@@ -16,6 +16,46 @@
     <dimen name="dp90">90dp</dimen>
     <dimen name="dp100">100dp</dimen>
 
+    <!-- image chat -->
+    <dimen name="btn_chat_size">45dp</dimen>
+    <dimen name="btn_chat_send">55dp</dimen>
+    <dimen name="btn_chat_magrin">10dp</dimen>
+    <dimen name="mini_border">1dp</dimen>
+    <dimen name="medium_border">5dp</dimen>
+    <dimen name="pd15">15dp</dimen>
+    <dimen name="pd30">30dp</dimen>
+    <dimen name="pd45">45dp</dimen>
+    <dimen name="edit_text_mini_height">40dp</dimen>
+    <dimen name="medium_text">15sp</dimen>
+    <dimen name="w15">15dp</dimen>
+    <dimen name="w30">30dp</dimen>
+    <dimen name="w20">20dp</dimen>
+    <dimen name="mt10">10dp</dimen>
+    <dimen name="w40">40dp</dimen>
+    <dimen name="w50">50dp</dimen>
+    <dimen name="pd20">20dp</dimen>
+    <dimen name="w100">100dp</dimen>
+    <dimen name="font_13sp">13sp</dimen>
+    <dimen name="font_10sp">10sp</dimen>
+    <dimen name="w10">10dp</dimen>
+    <dimen name="w8">8dp</dimen>
+    <dimen name="w2">2dp</dimen>
+    <dimen name="w70">70dp</dimen>
+    <dimen name="font_12sp">12sp</dimen>
+    <dimen name="w5">5dp</dimen>
+    <dimen name="w35">35dp</dimen>
+    <dimen name="w60">60dp</dimen>
+    <dimen name="sp15">15sp</dimen>
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="w12">12dp</dimen>
+    <dimen name="w16">16dp</dimen>
+    <dimen name="w200">200dp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp21">21sp</dimen>
+    <dimen name="sp14">14sp</dimen>
+
+
 
 
 

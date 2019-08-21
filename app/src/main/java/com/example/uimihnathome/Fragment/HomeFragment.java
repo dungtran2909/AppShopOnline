@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,7 @@ import com.example.impl.ItemClickListener;
 import com.example.model.NhanHieu;
 import com.example.model.SanPham;
 import com.example.network.ApiService;
+import com.example.uimihnathome.ChatActivity;
 import com.example.uimihnathome.ChiTietGioHangActivity;
 import com.example.uimihnathome.MainActivity;
 import com.example.uimihnathome.R;
@@ -57,8 +59,10 @@ public class HomeFragment extends Fragment {
     View view;
     Toolbar toolbar;
     ViewFlipper viewFlipper;
-
     TextView txt_SlGio;
+
+    EditText edt_search;
+    ImageView img_search;
 
     RecyclerView rcl_spAll;
     ArrayList<SanPham> arrSP, arrSPGio;
@@ -80,11 +84,52 @@ public class HomeFragment extends Fragment {
     private void addEvents() {
         ActionBar();
         ActionViewFlipper();
+        img_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!edt_search.getText().toString().isEmpty()){
+                    searchTen();
+                }
+
+            }
+        });
+    }
+
+    private void searchTen(){
+        ApiService.getInstance().getSPTheoTen(edt_search.getText().toString(), new Callback<SanPham>() {
+            @Override
+            public void onResponse(Call<SanPham> call, Response<SanPham> response) {
+                if(response.isSuccessful()){
+                    clear();
+                    SanPham spTim = response.body();
+                    arrSP.add(spTim);
+                    sanPhamAllAdapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SanPham> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void clear() {
+        int size = arrSP.size();
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                arrSP.remove(0);
+            }
+            sanPhamAllAdapter.notifyItemRangeRemoved(0, size);
+        }
     }
 
     private void addControls() {
+        String []emails=MainActivity.khs.getEmail().split("@");
+        FirebaseDatabase.getInstance().getReference().child("ChamSocKhachHang").child(emails[0]).setValue(MainActivity.khs);
 
-
+        img_search = view.findViewById(R.id.img_search);
+        edt_search = view.findViewById(R.id.edt_search);
         toolbar = view.findViewById(R.id.toolbar);
         viewFlipper = view.findViewById(R.id.viewflipper);
 
@@ -108,7 +153,7 @@ public class HomeFragment extends Fragment {
 //        rcl_spAll.setLayoutManager(new GridLayoutManager(getContext(),2));
         rcl_spAll.setAdapter(sanPhamAllAdapter);
         arrSPGio = new ArrayList<>();
-        getFirebase();
+//        getFirebase();
     }
 
 
@@ -176,7 +221,8 @@ public class HomeFragment extends Fragment {
         MenuItem item = menu.findItem(R.id.mn_giohang);
         View customGioHang = MenuItemCompat.getActionView(item);
         txt_SlGio = customGioHang.findViewById(R.id.txt_SlGio);
-//        txt_SlGio.setText(ChiTietGioHangActivity.dem+"");
+//       txt_SlGio.setText(ChiTietGioHangActivity.dem+"");
+        getFirebase();
 
         customGioHang.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -194,9 +240,14 @@ public class HomeFragment extends Fragment {
         int id = item.getItemId();
 
         if (id == R.id.mn_chat) {
-            Toast.makeText(getActivity(), "Chat", Toast.LENGTH_SHORT).show();
+           xuLyChat();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void xuLyChat() {
+        Intent intent=new Intent(view.getContext(), ChatActivity.class);
+        startActivity(intent);
     }
 
     private void getFirebase(){
@@ -205,7 +256,7 @@ public class HomeFragment extends Fragment {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 SanPhamFirebase sanPhamFirebase=dataSnapshot.getValue(SanPhamFirebase.class);
                 arrSPGio.add(new SanPham(sanPhamFirebase.getMaSP(),sanPhamFirebase.getTenSP(),sanPhamFirebase.getGiaSP(),sanPhamFirebase.getHinhSP(),sanPhamFirebase.getSlSP()));
-//                txt_SlGio.setText(arrSPGio.size()+"");
+                txt_SlGio.setText(arrSPGio.size()+"");
             }
 
             @Override

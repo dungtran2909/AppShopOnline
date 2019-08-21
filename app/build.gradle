@@ -51,6 +51,10 @@ dependencies {
 
 
     implementation 'com.github.Shashank02051997:FancyWalkthrough-Android:2.1'
+
+    implementation group: 'agency.tango.android', name: 'avatar-view-glide', version: '0.0.2'
+    implementation group: 'agency.tango.android', name: 'avatar-view', version: '0.0.2'
+    implementation group: 'agency.tango.android', name: 'avatar-view-picasso', version: '0.0.2'
 }
 
 apply plugin: 'com.google.gms.google-services'

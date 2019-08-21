@@ -145,4 +145,11 @@ public class ApiService {
         }
     }
 
+    public void getSPTheoTen(String tenSanPhamTen, Callback<SanPham> callback){
+        if (retrofit !=null){
+            Call<SanPham> sPTheoTenApi = retrofit.create(RestApi.class).getSPTheoTen(tenSanPhamTen);
+            sPTheoTenApi.enqueue(callback);
+        }
+    }
+
 }

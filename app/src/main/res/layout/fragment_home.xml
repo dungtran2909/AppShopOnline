@@ -34,14 +34,19 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp">
 
+                    <ImageView
+                        android:id="@+id/img_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_search"/>
+
                     <EditText
-                        android:id="@+id/edt_mail"
+                        android:id="@+id/edt_search"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/icon_search"
-                        android:drawablePadding="20dp"
                         android:hint="Tim Kiem"
-                        android:textColor="#000000"
+                        android:textColor="@color/red"
                         android:textColorHint="@color/text_color_main"
                         android:textSize="18sp" />
                 </LinearLayout>
