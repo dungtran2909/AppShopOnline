@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (chkRemember.isChecked())
                     //lưu lại thông tin đăng nhập
-                    saveData(edt_dnTK.getText().toString(),edt_dnMK.getText().toString());
+                    saveData(edt_dnTK.getText().toString(), edt_dnMK.getText().toString());
                 else
                     clearData();
                 checkEmail(edt_dnTK.getText().toString());
@@ -87,22 +87,20 @@ public class LoginActivity extends AppCompatActivity {
         ApiService.getInstance().getUserTheoEmail(email, new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                if (response.isSuccessful()){
-                    User kh=response.body();
-                    if (kh!=null){
-                        if (kh.getPassword().equals(edt_dnMK.getText().toString())){
-                            Toast.makeText(LoginActivity.this,"Đăng nhập thành công", Toast.LENGTH_LONG).show();
-                            Intent intent= new Intent(LoginActivity.this, MainActivity.class);
+                if (response.isSuccessful()) {
+                    User kh = response.body();
+                    if (kh != null) {
+                        if (kh.getPassword().equals(edt_dnMK.getText().toString())) {
+                            Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             intent.putExtra("KHACHHANG", kh);
                             startActivity(intent);
-                        }
-                        else
-                            Toast.makeText(LoginActivity.this,"Sai tên đăng nhập hoặc mật khẩu", Toast.LENGTH_LONG).show();
-                    }
-                    else
-                        Toast.makeText(LoginActivity.this,"Sai tên đăng nhập hoặc mật khẩu", Toast.LENGTH_LONG).show();
+                        } else
+                            Toast.makeText(LoginActivity.this, "Sai tên đăng nhập hoặc mật khẩu", Toast.LENGTH_LONG).show();
+                    } else
+                        Toast.makeText(LoginActivity.this, "Sai tên đăng nhập hoặc mật khẩu", Toast.LENGTH_LONG).show();
                 }
-                }
+            }
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
@@ -118,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
         edt_dnTK = findViewById(R.id.edt_dnTK);
         btn_DN = findViewById(R.id.btn_DN);
         btn_DK = findViewById(R.id.btn_DK);
-        chkRemember=findViewById(R.id.chkRemember);
+        chkRemember = findViewById(R.id.chkRemember);
     }
 
     private void clearData() {
@@ -131,16 +129,16 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(EMAIL, email);
         editor.putString(PASS, Pass);
-        editor.putBoolean(REMEMBER,chkRemember.isChecked());
+        editor.putBoolean(REMEMBER, chkRemember.isChecked());
         editor.commit();
     }
+
     private void loadData() {
-        if(sharedPreferences.getBoolean(REMEMBER,false)) {
+        if (sharedPreferences.getBoolean(REMEMBER, false)) {
             edt_dnTK.setText(sharedPreferences.getString(EMAIL, ""));
             edt_dnMK.setText(sharedPreferences.getString(PASS, ""));
             chkRemember.setChecked(true);
-        }
-        else
+        } else
             chkRemember.setChecked(false);
     }
 }

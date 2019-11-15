@@ -87,6 +87,7 @@ public class ThongTinFragment extends Fragment implements OnMapReadyCallback {
             public void onClick(View v) {
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 

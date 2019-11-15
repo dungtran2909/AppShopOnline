@@ -9,7 +9,6 @@ import com.example.uimihnathome.BuildConfig;
 public class SharedPreferencesManager {
     private static final String PREF_FIRST_TIME_SETUP = BuildConfig.APPLICATION_ID + ".pref_first_time_setup";
 
-
     private static SharedPreferences sPreferences;
 
     private SharedPreferencesManager() {

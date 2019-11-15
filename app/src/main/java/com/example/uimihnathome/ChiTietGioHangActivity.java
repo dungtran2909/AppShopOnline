@@ -42,7 +42,7 @@ import retrofit2.Response;
 public class ChiTietGioHangActivity extends AppCompatActivity {
     RecyclerView rcl_giohang;
     GioHangAdapter gioHangAdapter;
-    ArrayList<SanPham> arrSP;
+    ArrayList<SanPham>  arrSP;
 
     TextView txt_giaAll;
     Button btn_buyAll;
@@ -223,6 +223,8 @@ public class ChiTietGioHangActivity extends AppCompatActivity {
                 btn_fix.setVisibility(View.VISIBLE);
                 btn_save.setVisibility(View.GONE);
 
+
+
                 ApiService.getInstance().getFixAccount(MainActivity.khs.getMaKH(), txt_username.getText().toString(),
                         MainActivity.khs.getEmail(), Integer.parseInt(txt_phone.getText().toString()),
                         txt_position.getText().toString(), MainActivity.khs.getPassword(),
@@ -242,6 +244,8 @@ public class ChiTietGioHangActivity extends AppCompatActivity {
             }
         });
 
+
+        dialogBuilder.setCancelable(true);
         dialogBuilder.setView(mView);
         dialogBuilder.setTitle("Thêm thông tin khách hàng");
         AlertDialog dialog = dialogBuilder.create();

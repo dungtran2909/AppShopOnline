@@ -53,33 +53,14 @@
                 android:text="16/08/2019"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ln3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp5"
-            android:layout_below="@+id/ln2"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Thời gian giao hàng: "/>
-            <TextView
-                android:id="@+id/txt_ngayGH"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp10"
-                android:textColor="@color/text_color_main"
-                android:text="18/08/2019"/>
-        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/ln4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp5"
-            android:layout_below="@+id/ln3"
+            android:layout_below="@+id/ln2"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
@@ -102,8 +83,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="33dp"
         android:src="@drawable/icon_loading" />
 
 </RelativeLayout>

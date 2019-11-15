@@ -59,8 +59,8 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.ItemHold
         holder.txt_maDH.setText(donHang.getMaDonHang() + "");
         String[] ngayDH = donHang.getNgayDat().split("T");
         holder.txt_ngayDH.setText(ngayDH[0]);
-        String[] ngayGH = donHang.getNgayGiao().split("T");
-        holder.txt_ngayGH.setText(ngayGH[0]);
+//        String[] ngayGH = donHang.getNgayGiao().split("T");
+//        holder.txt_ngayGH.setText(ngayGH[0]);
 
         if (donHang.getTrangThai() == 0) {
             holder.txt_trangthai.setTextColor(Color.RED);
@@ -106,7 +106,7 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.ItemHold
             img_trangthai = itemView.findViewById(R.id.img_trangthai);
             txt_maDH = itemView.findViewById(R.id.txt_maDH);
             txt_ngayDH = itemView.findViewById(R.id.txt_ngayDH);
-            txt_ngayGH = itemView.findViewById(R.id.txt_ngayGH);
+//            txt_ngayGH = itemView.findViewById(R.id.txt_ngayGH);
             txt_trangthai = itemView.findViewById(R.id.txt_trangthai);
 
             itemView.setOnClickListener(new View.OnClickListener() {

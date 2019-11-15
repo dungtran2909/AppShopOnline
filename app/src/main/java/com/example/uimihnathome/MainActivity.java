@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         khs = (User) intent.getSerializableExtra("KHACHHANG");
-
     }
 
 }
